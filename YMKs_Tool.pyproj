@@ -25,6 +25,7 @@
     <Compile Include="Decoder\AnimGetter.py" />
     <Compile Include="Decoder\AnimRetriever.py" />
     <Compile Include="Decoder\AnimTracker.py" />
+    <Compile Include="Decoder\KeyframeParser.py" />
     <Compile Include="Decoder\YMKs.py" />
     <Compile Include="Decoder\__init__.py" />
     <Compile Include="Main_Window.py" />
