@@ -19,15 +19,15 @@ class YMKs:
         """
         try:
             with open(file_path, 'rb') as f:
-                f.seek(CEKey.TOC_OFFSET)
+                f.seek(YMKs.TOC_OFFSET)
                 toc_count = struct.unpack('H', f.read(2))[0]
             
-                f.seek(CEKey.ASSET_TABLE_OFFSET)
+                f.seek(YMKs.ASSET_TABLE_OFFSET)
                 asset_table_start = struct.unpack('I', f.read(4))[0]
-                anim_sector_start = asset_table_start + (toc_count * CEKey.ENTRY_SIZE)
+                anim_sector_start = asset_table_start + (toc_count * YMKs.ENTRY_SIZE)
             
                 for index in range(toc_count):
-                    entry_offset = asset_table_start + (index * CEKey.ENTRY_SIZE)
+                    entry_offset = asset_table_start + (index * YMKs.ENTRY_SIZE)
                     f.seek(entry_offset)
                     _, _, rel_offset, num_keyframes = struct.unpack('HHII', f.read(12))
                 
