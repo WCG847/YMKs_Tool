@@ -4,8 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>61037edf-e523-4d2d-bf9e-2dce8399549f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>
-    </StartupFile>
+    <StartupFile>Main_Window.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,9 +21,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Decoder\Anim.py" />
+    <Compile Include="Decoder\AnimChecker.py" />
+    <Compile Include="Decoder\AnimGetter.py" />
+    <Compile Include="Decoder\AnimRetriever.py" />
+    <Compile Include="Decoder\AnimTracker.py" />
     <Compile Include="Decoder\YMKs.py" />
     <Compile Include="Decoder\__init__.py" />
+    <Compile Include="Main_Window.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Decoder\" />
